@@ -1,0 +1,67 @@
+body
+{
+    margin :0;
+    /* background-color: rgb(12, 12, 95); */
+    height:100vh;
+    background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+}
+nav{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,
+     rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%,
+      rgba(255, 255, 255, 0) 100%);
+}
+.nav-item:hover
+{
+    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6); */
+    box-shadow: 0 5px 05px rgba(0,0,0,.4) ;
+    background-color: rgba(0,0,0,0.1);
+}
+ /* food container */
+ .food-container
+ {
+ }
+ .container-sm
+ {
+    /* background-color: white; */
+
+ }
+ /* .col-12
+ {
+     background-color: aliceblue;
+ } */
+
+ /* card */
+ .img-card
+ {
+    width:100%;
+    /* max-width:300px; */
+ }
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background:rgb(190, 190, 190);
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:rgb(163, 163, 163);
+  }
+ /*  */
+ @media only screen and (min-width: 0px) 
+ {
+    .meal-instructions
+    {
+        height:300px;
+        overflow-y: scroll;
+    }
+ }

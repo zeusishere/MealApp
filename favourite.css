@@ -2,7 +2,8 @@ body
 {
     margin :0;
     /* background-color: rgb(12, 12, 95); */
-    height:100vh;
+    min-height:100vh;
+
     background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
 }
 nav{
@@ -16,25 +17,33 @@ nav{
     box-shadow: 0 5px 05px rgba(0,0,0,.4) ;
     background-color: rgba(0,0,0,0.1);
 }
- /* food container */
- .food-container
+ .rounded-border
  {
+     border-radius:10px ;
  }
- .container-sm
- {
-    /* background-color: white; */
-
- }
- /* .col-12
- {
-     background-color: aliceblue;
- } */
-
  /* card */
+ .vanish
+ {
+     opacity:0px;
+     animation: vanish-animation 1s ease-in 0s 1 ;
+ }
+ @keyframes vanish-animation {
+     from
+     {
+         opacity: 1;
+     }
+     to
+     {
+         opacity: 0;
+     }
+     
+ }
  .img-card
  {
-    width:100%;
-    /* max-width:300px; */
+    width:90%;
+    border-radius: 5px ;
+    box-shadow: 0 0 10px rgba(0,0,0,1) ;
+    max-width: 200px;
  }
 
 /* scroll bar */
@@ -56,12 +65,39 @@ nav{
   ::-webkit-scrollbar-thumb:hover {
     background:rgb(163, 163, 163);
   }
- /*  */
- @media only screen and (min-width: 0px) 
+/* fav-del */
+.fav-del
+{
+    width:40px;
+   
+}
+.fav-del:hover
+{
+    transform: scale(1.1);
+}
+ .meal-page-link
  {
-    .meal-instructions
-    {
-        height:300px;
-        overflow-y: scroll;
-    }
+     text-decoration:none;
+     color: black;
  }
+/* on-page-load animation */
+.appear-animation
+{
+   
+  animation: appear-anima .5s linear  1  ;
+}
+@keyframes appear-anima 
+{ 
+  0%
+  {
+      opacity: 0;
+  }
+  50%
+  {
+      opacity: 0;
+  }
+  to
+  {
+      opacity: 1;
+  }
+}

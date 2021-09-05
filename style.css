@@ -11,9 +11,12 @@
 
 body{
     margin :0;
+    padding: 0;
     /* background-color: rgb(12, 12, 95); */
-    height:100vh;
+    min-height:100vh;
     background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+    /* overflow:h ; */
+    padding-bottom: 100px;;
 }
 nav{
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,
@@ -115,7 +118,19 @@ nav{
   ::-webkit-scrollbar-thumb:hover {
     background:rgb(163, 163, 163);
   }
- .search-result
- {
-     
- }
+ 
+
+  .text-animation
+  {
+    animation: text-animate 1s ease-in-out .5s infinite alternate-reverse  ;
+  }
+  @keyframes text-animate {
+      from
+      {
+          transform: scale(1);
+      }
+      to{
+          transform: scale(1.2);
+      }
+      
+  }

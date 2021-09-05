@@ -34,34 +34,20 @@ search_input.addEventListener("input", function () {
 function createResultElement(meal_name, meal_link) {
     // let link = document.createElement("a");
 
-    // link.setAttribute("href","") ;
+  
 
     let index = meal_name.toLowerCase().indexOf(search_input.value.toLowerCase());
-    // console.log( meal_name.toLowerCase(),search_input.value.toLowerCase(),"index",index)
-
-    // styles the search query in search results
-    // let search_query_span =  document.createElement("span");
-    // search_query_span.setAttribute("class","text-dark");
-
-    // link.appendChild(document.createTextNode(meal_name.substring(0,index)) )
-    // search_query_span.innerHTML=meal_name.substring(index ,index+search_input.value.length +1);
-    // console.log("index is",index,meal_name,search_query_span)
-    // link.appendChild(search_query_span);
-    // console.log(meal_name.substring(index+search_input.value.length+1,meal_name.length));
-    // link.appendChild(document.createTextNode(meal_name.substring(index+search_input.value.length+1,meal_name.length)) )
-
-    //    link.innerHTML=`${meal_name.substring(0,index)}<span class="text-dark">${meal_name.substring(index ,index+search_input.value.length)}</span>${meal_name.substring(index+search_input.value.length,meal_name.length)}
-    //     <img src="https://cdn-icons-png.flaticon.com/512/3237/3237429.png" class=" fav-icon float-right">`;
+    
     let list_element = document.createElement("li");
-    // list_element.appendChild(link);
+ 
     list_element.innerHTML = `${meal_name.substring(0, index)}<span class="text-dark">${meal_name.substring(index, index + search_input.value.length)}</span>${meal_name.substring(index + search_input.value.length, meal_name.length)}
     <img src="https://cdn-icons-png.flaticon.com/512/3237/3237429.png" class=" fav-icon float-right">`;
     list_element.setAttribute("class", "text-muted bg-light search-result");
     // event handler stores current meal in local storage
     list_element.addEventListener("click", () => {
-        // preventDefault();
         console.log(meal_name)
         storeCurrentMeal(meal_name);
+        window.location = "./meal.html" ;
     });
     let fav_element = list_element.querySelector(".fav-icon");
     // console.log("fav ",fav_element)

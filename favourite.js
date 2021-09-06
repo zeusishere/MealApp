@@ -14,12 +14,12 @@ for (item of fav_meal_arr) {
     const { strMeal, strMealThumb, strCategory, strArea, strTags, idMeal } = matched_meal;
     // HTML element to be added DOM
     let card = ` <!-- col1 -->
-    <div class="col-12 col-md-6   "  id="card-${idMeal}">
+    <div class="col-12 col-md-6 text-wrap  "  id="card-${idMeal}">
       <div class="row bg-light mx-1 py-3 rounded-border">
         <div class="left col-12 col-sm-6 col-md-6  text-center
         ">
           <img src="${strMealThumb}" class="img-card " alt="an image of food">
-          <p class="text-center text-nowrap display-6"><a href="" data-name="${strMeal}" class="meal-page-link display-6">${strMeal}</a></p>
+          <p class="text-center text-wrap display-6"><a href="" data-name="${strMeal}" class="meal-page-link display-6">${strMeal}</a></p>
         </div>
         <!-- instructions for dish -->
         <!-- col 2 -->
@@ -49,7 +49,7 @@ setTimeout(function () {
   let meal_page_links = document.querySelectorAll(".meal-page-link");
   console.log(meal_page_links)
   for (link of meal_page_links) {
-    
+
     link.addEventListener("click", openMealPage);
   }
 

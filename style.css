@@ -12,11 +12,11 @@
 body{
     margin :0;
     padding: 0;
-    /* background-color: rgb(12, 12, 95); */
+    
     min-height:100vh;
-    background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
-    /* overflow:h ; */
+    
     padding-bottom: 100px;;
+    background-color: rgba(54,69,79,.8);
 }
 nav{
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,
@@ -25,14 +25,9 @@ nav{
 }
 .nav-item:hover
 {
-    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6); */
     box-shadow: 0 5px 05px rgba(0,0,0,.4) ;
     background-color: rgba(0,0,0,0.1);
 }
-/* .row
-{
-    max-height:400px;
-} */
 .match-container
 {
     height: 250px;
@@ -73,7 +68,6 @@ nav{
     transform: scale(1.2);
 }
 
-/* Search section */
 #search
 {
     min-width: 210px;
